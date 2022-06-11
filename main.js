@@ -13,6 +13,7 @@ const runGame = () => {
     let doors = genDoors(); // Generate the doors
     let my_door_index = Math.round(Math.random()*2); // Pick a random index
     let my_door = doors[my_door_index]; // My door result
+
     // Round 1 
     // - remove my door from array
     doors.splice(my_door_index, 1);
@@ -23,9 +24,10 @@ const runGame = () => {
     else {
         doors.splice(0,1);
     }
+    //Round 2 
     // - now doors contains one door with goat or car
 
-    console.log(`Door left is ${doors}, my door is ${my_door}`);
+    // console.log(`Door left is ${doors}, my door is ${my_door}`);
 
     // Keeper
     // - if the door unopened is true => swapper wins
@@ -36,8 +38,32 @@ const runGame = () => {
     else {
         keeper++;
     }
-    //return stats in an object {Keep: 0/1, Swap:0/1}
-    return {Keep: keeper, Swap: swapper};
+    //return result in an array [keeper, swapper]
+    return [keeper, swapper];
 }
 
-console.log(runGame(1));
+    // console.log(runGame());
+
+// Collect stats on a given number of rounds
+const stats = (countdown) => {
+
+    if(countdown<0) {
+        alert("Please enter a valid number");
+        return stats;
+    }
+    
+    let keep = 0;
+    let swap = 0;
+    
+    for(let i=0; i<countdown; i++) {
+        [a, b] = runGame();
+        if(a>b) {
+            keep++;
+        }
+        else swap++;
+    }
+    // Return an object {keepWins: keep/countdown, swapWins: swap/countdown}
+    return {keepWins: keep/countdown*100+"%", swapWins: swap/countdown*100+"%"};
+}
+
+console.log(`Statistics of ${rounds=50} rounds shows that`, stats(rounds));
