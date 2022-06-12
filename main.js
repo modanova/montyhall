@@ -72,18 +72,25 @@ const stats = (countdown) => {
 
 
 const btn = document.getElementById('submit_input');
-btn.addEventListener('click', func)
+btn.addEventListener('click', displayStats);
 
-function func() {
-    const playcount = document.getElementById("playcount").value;
+playcount.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        displayStats();
+    }
+});
+
+
+function displayStats() {
+    const playcount = document.getElementById("playcount");
     if(document.getElementById("stats").innerHTML=="") {
-    document.getElementById("stats").innerHTML = `Statistics of ${playcount} rounds`;
+    document.getElementById("stats").innerHTML = `Statistics of ${playcount.value} rounds`;
     }
 
     const keeper_bar = document.getElementById("keeper_bar");
     const swapper_bar = document.getElementById("swapper_bar");
 
-    let statistics = stats(playcount);
+    let statistics = stats(playcount.value);
     let {keepWins: k, swapWins: s} = statistics;
 
     keeper_bar.style.width = k;
