@@ -5,13 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Monty Hall problem</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
-</head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Monty Hall problem</title>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-door-closed, .fa-car-tunnel, .fa-ranking-star {font-size:200px}
+  </style>
   <body>
-    <h1>Hello, player!</h1>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:100px 16px;">
+  <h1 class="w3-margin w3-jumbo">The Monty Hall problem</h1>
+  <img src="./doors.jpeg" class="w3-image" width="30%">
+  <p class="w3-xlarge">Vos Savant's solution demontration</p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>The problem </h1>
+      <h5 class="w3-padding-32">The Monty Hall problem is a brain teaser, in the form of a probability puzzle, loosely based on the American television game show Let's Make a Deal and named after its original host, Monty Hall. The problem was originally posed (and solved) in a letter by Steve Selvin to the American Statistician in 1975. It became famous as a question from reader Craig F. Whitaker's letter quoted in Marilyn vos Savant's "Ask Marilyn" column in Parade magazine in 1990:
+        <blockquote>Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+        </blockquote>
+      </h5>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa-solid fa-door-closed w3-padding-64 w3-text-blue"></i>
+    </div>
+
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa-solid fa-car-tunnel w3-padding-64 w3-text-orange w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>The solution</h1>
+      <h5 class="w3-padding-32">Vos Savant's response was that the contestant should switch to the other door. Under the standard assumptions, the switching strategy has a 2/3 probability of winning the car, while the strategy that remains with the initial choice has only a 1/3 probability</h5>
+
+      <p class="w3-text-grey">When the player first makes their choice, there is a 2/3 chance that the car is behind one of the doors not chosen. This probability does not change after the host reveals a goat behind one of the unchosen doors. When the host provides information about the 2 unchosen doors (revealing that one of them does not have the car behind it), the 2/3 chance of the car being behind one of the unchosen doors rests on the unchosen and unrevealed door, as opposed to the 1/3 chance of the car being behind the door the contestant chose initially.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Demonstration </h1>
+      <h5 class="w3-padding-32">The Monty Hall problem is a brain teaser, in the form of a probability puzzle, loosely based on the American television game show Let's Make a Deal and named after its original host, Monty Hall. The problem was originally posed (and solved) in a letter by Steve Selvin to the American Statistician in 1975. It became famous as a question from reader Craig F. Whitaker's letter quoted in Marilyn vos Savant's "Ask Marilyn" column in Parade magazine in 1990:
+        <blockquote>Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+        </blockquote>
+      </h5>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa-solid fa-ranking-star w3-padding-64 w3-text-green"></i>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+  <script src="https://kit.fontawesome.com/2e59e30a69.js" crossorigin="anonymous"></script>
     <script src="main.js">
     </script>
   </body>

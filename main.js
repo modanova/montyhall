@@ -66,4 +66,4 @@ const stats = (countdown) => {
     return {keepWins: keep/countdown*100+"%", swapWins: swap/countdown*100+"%"};
 }
 
-console.log(`Statistics of ${rounds=50} rounds shows that`, stats(rounds));
+console.log(`Statistics of ${rounds=1000} rounds shows that`, stats(rounds));
