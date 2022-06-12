@@ -63,7 +63,29 @@ const stats = (countdown) => {
         else swap++;
     }
     // Return an object {keepWins: keep/countdown, swapWins: swap/countdown}
-    return {keepWins: keep/countdown*100+"%", swapWins: swap/countdown*100+"%"};
+    return {keepWins: Math.round(keep/countdown*100)+"%", swapWins: Math.round(swap/countdown*100)+"%"};
 }
 
-console.log(`Statistics of ${rounds=1000} rounds shows that`, stats(rounds));
+// console.log(`Statistics of ${rounds=1000} rounds shows that`, stats(rounds)));
+
+// Event listener for input of rounds
+
+
+const btn = document.getElementById('submit_input');
+btn.addEventListener('click', func)
+
+function func() {
+    const playcount = document.getElementById("playcount").value;
+    if(document.getElementById("stats").innerHTML=="") {
+    document.getElementById("stats").innerHTML = `Statistics of ${playcount} rounds`;
+    }
+
+    const keeper_bar = document.getElementById("keeper_bar");
+    const swapper_bar = document.getElementById("swapper_bar");
+
+    let statistics = stats(playcount);
+    let {keepWins: k, swapWins: s} = statistics;
+
+    keeper_bar.style.width = k;
+    swapper_bar.style.width = s;
+}
