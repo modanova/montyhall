@@ -63,7 +63,7 @@ const stats = (countdown) => {
         else swap++;
     }
     // Return an object {keepWins: keep/countdown, swapWins: swap/countdown}
-    return {keepWins: Math.round(keep/countdown*100)+"%", swapWins: Math.round(swap/countdown*100)+"%"};
+    return {keepWins: (keep/countdown*100).toFixed(2)+"%", swapWins: (swap/countdown*100).toFixed(2)+"%"};
 }
 
 // console.log(`Statistics of ${rounds=1000} rounds shows that`, stats(rounds)));
@@ -83,10 +83,8 @@ playcount.addEventListener('keypress', function (e) {
 
 function displayStats() {
     const playcount = document.getElementById("playcount");
-    if(document.getElementById("stats").innerHTML=="") {
     document.getElementById("stats").innerHTML = `Statistics of ${playcount.value} rounds`;
-    }
-
+    
     const keeper_bar = document.getElementById("keeper_bar");
     const swapper_bar = document.getElementById("swapper_bar");
 
